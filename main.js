@@ -47,6 +47,13 @@ function updateCellValues() {
             cell.textContent = number !== 0 ? number : '';
             cell.style.backgroundColor = getNumberBackgroundColor(number);
             cell.style.color = getNumberColor(number);
+            if (number < 100) {
+                cell.style.fontSize = '60px';
+            } else if (number < 1000) {
+                cell.style.fontSize = '48px';
+            } else {
+                cell.style.fontSize = '32px';
+            }
         }
     }
 }
